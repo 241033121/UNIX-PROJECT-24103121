@@ -1,0 +1,58 @@
+## Simple Voting System – UNIX Shell Script
+
+📝 Project Overview
+This project is a simple, menu-driven voting system written in Bash shell scripting.
+Users can vote for one of three candidates — Alice, Bob, or Carol.
+Votes are stored in a text file so results remain saved even after the program exits.
+
+This project demonstrates basic UNIX concepts such as:
+File handling
+Loops
+Menu-driven programming
+Case statements
+User input handling
+
+🎯 Features
+✔ Cast vote for one of three candidates
+
+✔ Results saved in votes.txt
+
+✔ View live results anytime
+
+✔ Admin-only vote reset option
+
+✔ Simple & clean menu interface
+
+✔ Beginner-friendly UNIX project
+
+📂 Files in This Project
+voting_system.sh → Main shell script
+votes.txt → Stores vote counts
+README.md → Project documentation
+
+🚀 How to Run the Project
+1️⃣ Give execute permission
+chmod +x voting_system.sh
+2️⃣ Run the script
+./voting_system.sh
+
+📌 Usage Menu
+The script displays the following options:
+
+1) Vote for Class Representative
+2) View Results
+3) Reset Votes (Admin)
+4) Exit
+
+🧑‍💻 Code Summary
+Each time a user votes, the script:
+
+Reads current values
+
+Updates the chosen candidate’s count
+
+Saves the new totals
+
+Reset option requires admin password:
+“ananya123”
+
