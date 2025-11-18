@@ -1,0 +1,87 @@
+#!/bin/bash
+
+# -------------------------------------------
+# SIMPLE VOTING SYSTEM (UNIX PROJECT)
+# B.Tech 3rd Semester – Shell Script
+# -------------------------------------------
+
+# Vote file
+VOTE_FILE="votes.txt"
+
+# Initialize vote file if not present
+if [ ! -f "$VOTE_FILE" ]; then
+echo "0 0 0" > $VOTE_FILE
+fi
+
+# Function to display menu
+show_menu() {
+echo "--------------------------------------"
+echo " SIMPLE VOTING SYSTEM"
+echo "--------------------------------------"
+echo "1) Vote for Class Representative"
+echo "2) View Results"
+echo "3) Reset Votes (Admin)"
+echo "4) Exit"
+echo "--------------------------------------"
+}
+
+# Function to cast vote
+cast_vote() {
+echo "Vote for Class Representative"
+echo "1) Alice"
+echo "2) Bob"
+echo "3) Carol"
+read -p "Your Choice: " choice
+
+# Read current votes
+read A B C < $VOTE_FILE
+
+case $choice in
+1) A=$((A+1)); echo "You voted for Alice!" ;;
+2) B=$((B+1)); echo "You voted for Bob!" ;;
+3) C=$((C+1)); echo "You voted for Carol!" ;;
+*) echo "Invalid choice!" ; return ;;
+esac
+
+# Update file
+echo "$A $B $C" > $VOTE_FILE
+}
+
+# Function to view results
+view_results() {
+read A B C < $VOTE_FILE
+echo "------------- RESULTS -------------"
+echo "Alice = $A"
+echo "Bob = $B"
+echo "Carol = $C"
+echo "-----------------------------------"
+}
+
+# Reset votes (Admin)
+reset_votes() {
+echo "Enter admin password to reset votes:"
+read -s pass
+
+if [ "$pass" == "ananya123" ]; then
+echo "0 0 0" > $VOTE_FILE
+echo "Votes have been reset!"
+else
+echo "Incorrect password!"
+fi
+}
+
+# MAIN PROGRAM LOOP
+while true; do
+show_menu
+read -p "Enter your choice: " option
+
+case $option in
+1) cast_vote ;;
+2) view_results ;;
+3) reset_votes ;;
+4) echo "Exiting... Thank you!"; exit ;;
+*) echo "Invalid option! Try again." ;;
+esac
+
+echo "" # empty line for readability
+done
