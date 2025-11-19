@@ -2,9 +2,7 @@
 
 # -------------------------------------------
 # SIMPLE VOTING SYSTEM (UNIX PROJECT)
-# B.Tech 3rd Semester – Shell Script
 # -------------------------------------------
-
 # Vote file
 VOTE_FILE="votes.txt"
 
