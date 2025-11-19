@@ -1,6 +1,6 @@
 ## Simple Voting System – UNIX Shell Script
 
-📝 Project Overview
+Project Overview
 This project is a simple, menu-driven voting system written in Bash shell scripting.
 Users can vote for one of three candidates — Alice, Bob, or Carol.
 Votes are stored in a text file so results remain saved even after the program exits.
@@ -12,7 +12,7 @@ Menu-driven programming
 Case statements
 User input handling
 
-🎯 Features
+Features
 ✔ Cast vote for one of three candidates
 
 ✔ Results saved in votes.txt
@@ -25,18 +25,18 @@ User input handling
 
 ✔ Beginner-friendly UNIX project
 
-📂 Files in This Project
+Files in This Project
 voting_system.sh → Main shell script
 votes.txt → Stores vote counts
 README.md → Project documentation
 
-🚀 How to Run the Project
+How to Run the Project
 1️⃣ Give execute permission
 chmod +x voting_system.sh
 2️⃣ Run the script
 ./voting_system.sh
 
-📌 Usage Menu
+Usage Menu
 The script displays the following options:
 
 1) Vote for Class Representative
@@ -44,7 +44,7 @@ The script displays the following options:
 3) Reset Votes (Admin)
 4) Exit
 
-🧑‍💻 Code Summary
+Code Summary
 Each time a user votes, the script:
 
 Reads current values
