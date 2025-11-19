@@ -3,6 +3,7 @@
 # -------------------------------------------
 # SIMPLE VOTING SYSTEM (UNIX PROJECT)
 # -------------------------------------------
+
 # Vote file
 VOTE_FILE="votes.txt"
 
